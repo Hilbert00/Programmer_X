@@ -63,7 +63,7 @@ section h1 {
     left: 5%;
     top: 8%;
     font-weight: 900;
-    width: 50%;
+    width: 40%;
     z-index: 1;
 }
 
@@ -122,15 +122,39 @@ div.background {
 
 section#sobre div.background {
     background-image: url('/images/Mobile/Wavy.svg');
-    background-position: -4vmax;
+    background-position: -1vmax;
 }
 
-img.wavy {
-    position: relative;
-    overflow: hidden;
-    float: left;
-    object-fit: contain;
-    width: 70%;
-    height: 100%;
+section#trajetoria div.background {
+    background-image: url('/images/Mobile/Wavy2.svg');
+    background-position: -2.3vmax;
 }
 
+section#trajetoria img {
+    left: -1.3vmax
+}
+
+section#trajetoria h1 {
+    font-size: 1.8rem;
+}
+
+section#trajetoria img#arrow {
+    position: absolute;
+    height: 78vmax;
+    left: 22%;
+    top: 25%;
+}
+
+section#trajetoria img#icons {
+    position: absolute;
+    height: 66vmax;
+    left: 36%;
+    top: 25%;
+}
+
+section#trajetoria img#events {
+    position: absolute;
+    height: 65.5vmax;
+    left: 5%;
+    top: 26%;
+}
