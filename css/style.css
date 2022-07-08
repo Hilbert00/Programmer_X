@@ -296,6 +296,13 @@ div#footer-top div#logo span {
     font-size: 0.93rem;
 }
 
+div#footer-top div#logo div#medias {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding-top: 1vh;
+}
+
 footer div#footer-bottom {
     position: relative;
     display: flex;
