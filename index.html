@@ -11,8 +11,14 @@
 
 <body>
     <nav>
-        <ul>
-            <li id="logo"><img src="./images/mobile/Logo-V.svg" alt="Logo"></li>
+        <div id="logo">
+            <img src="./images/mobile/Logo-H2.svg" alt="Logo">
+        </div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
             <li>
                 <a href="#sobre">Quem Somos?</a>
             </li>
@@ -31,7 +37,7 @@
         <section id="home">
             <h1>BEM VINDO</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <input type="button" value="Trabalhe Conosco">
+            <a href=""><input type="button" value="Seja um de nós"></a>
         </section>
 
         <section id="sobre">
@@ -138,7 +144,8 @@
 
                         <div class="info-box" id="newsletter">
                             <a href="">Receba nossas novidades</a>
-                            <input type="email" name="news-email" id="news-email" placeholder="Digite seu endereço de email aqui">
+                            <input type="email" name="news-email" id="news-email"
+                                placeholder="Digite seu endereço de email aqui">
                             <input type="button" value="Confirmar" id="confirm-email">
                         </div>
                     </div>
