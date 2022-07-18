@@ -8,12 +8,7 @@
 }
 
 html {
-
     font-size: 2.2vh;
-}
-
-li#logo {
-    justify-content: left;
 }
 
 a {
@@ -180,7 +175,7 @@ section#home {
     height: 90vh;
     background-size: cover;
     background-position: center;
-    background-image: url(../images/Mobile/Hero.svg);
+    background-image: url(../images/mobile/Hero.svg);
     z-index: -1;
 }
 
@@ -203,6 +198,7 @@ section#home input {
     position: absolute;
     color: #f5f5f5;
     font-size: 0.8rem;
+    font-weight: 700;
     background: linear-gradient(142.47deg, #48C6EF 14.66%, #6F86D6 150.71%);
     border-radius: 24px;
     border-style: none;
@@ -215,7 +211,7 @@ section#home input {
 section#sobre {
     background-size: cover;
     background-position: center;
-    background-image: url(../images/Mobile/AboutBackground.svg);
+    background-image: url(../images/mobile/AboutBackground.svg);
 }
 
 section#sobre p {
@@ -369,7 +365,7 @@ section#contato {
 
 section#contato div#contact-flex-box p {
     font-size: 1.2rem;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 section#contato div#contact-flex-box h2 {
@@ -415,18 +411,20 @@ div#footer-top div#logo div#medias {
     padding-top: 1vh;
 }
 
+div#footer-top div#logo div#medias a img{
+    width: 100%;
+}
+
 div#footer-top div#others {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     width: 50%;
-    height: 50%;
-    padding-top: 10%;
 }
 
 div#others div.info-box {
     width: 45%;
-    height: auto;
+    margin-bottom: 15%;
 }
 
 div#others div.info-box a {
@@ -442,7 +440,7 @@ div#others div.info-box#newsletter a {
 }
 
 div#others div.info-box input#news-email {
-    width: 98%;
+    width: 100%;
     padding: 5% 1%;
     font-size: 0.3rem;
     color: #393838;
@@ -479,4 +477,195 @@ footer div#footer-bottom {
 div#footer-bottom p {
     font-weight: 300;
     font-size: 0.5rem;
+}
+
+/* Versão Desktop */
+
+@media (min-width: 1024px) {
+    section h1 {
+        font-size: 5rem;
+        width: 30%;
+    }
+
+    section#home {
+        height: 90vh;
+        background-size: cover;
+        background-position: center;
+        background-image: url(../images/desktop/Hero.svg);
+        z-index: -1;
+    }
+
+    section#home h1 {
+        font-size: 6rem;
+        width: 30%;
+        top: 20%;
+    }
+
+    section#home p {
+        font-size: 1.5rem;
+        top: 50%;
+        width: 20%;
+    }
+
+    section#home input {
+        font-size: 1rem;
+        width: 14%;
+        top: 70%;
+    }
+
+    section#sobre {
+        background-size: 106.5vh, 180vh;    
+        background-repeat: no-repeat;
+        background-position-x: left, right;
+        background-position-y: top;
+        background-image: url(../images/desktop/Wavy.svg), url(../images/desktop/AboutBackground.svg);
+    }
+
+    section#sobre p {
+        top: 40%;
+        font-size: 2rem;
+        width: 30%;
+    }
+
+    div.images img#wavy {
+        display: none;
+    }
+
+    section#trajetoria {
+        background-size: 90vw, 90vw, 84vw, 82vw, 110vh;  
+        background-repeat: no-repeat;
+        background-position-x: center, center, center, center, left;
+        background-position-y: 34vw, 18vw, 21vw, 39vw, bottom;
+        background-image: url(../images/desktop/Arrow.svg), url(../images/desktop/Happenings.svg), url(../images/desktop/Icons.svg), url(../images/desktop/Years.svg), url(../images/desktop/Wavy.svg);
+    }
+
+    section#trajetoria h1 {
+        font-size: 4rem;
+    }
+
+    section#trajetoria img#arrow {
+        display: none;
+    }
+
+    section#trajetoria img#icons {
+        display: none;
+    }
+
+    section#trajetoria img#events {
+        display: none;
+    }
+
+    section#servicos h1 {
+        top: 6%;
+    }
+
+    section#servicos p {
+        font-size: 2rem;
+        top: 22%;
+    }
+
+    section#servicos div.flex-box {
+        top: 42%;
+    }
+
+    section#servicos div.flex-box div.flex-item {
+        width: 24%;
+    }
+
+    section#servicos div.flex-box div.flex-item div.flex-item__banner {
+        height: 40vh;
+    }
+
+    section#servicos div.flex-box div.flex-item div.flex-item__banner img {
+        width: 60%;
+    }
+
+    section#servicos div.flex-box div.flex-item div.flex-item__info {
+        height: 16vh;
+    }
+
+    section#servicos div.flex-box div.flex-item div.flex-item__info span {
+        font-size: 2rem;
+    }
+
+    section#contato div#contact-flex-box {
+        top: 5%;
+        height: 35vh;
+    }
+
+    section#contato div#contact-flex-box p {
+        font-size: 2rem;
+    }
+
+    section#contato div#contact-flex-box h2 {
+        font-size: 4rem;
+        font-weight: 600;
+    }
+
+    footer {
+        top: 50vh;
+    }
+
+    footer div#footer-top {
+        height: 35vh;
+    }
+
+    div#footer-top div#logo {
+        width: 15%;
+        margin-right: 5%;
+    }
+
+    div#footer-top div#logo span {
+        font-size: 1.15rem;
+    }
+
+    div#footer-top div#logo div#medias {
+        padding-top: 2vh;
+    }
+
+    div#footer-top div#logo div#medias a img{
+        width: 150%;
+    }
+
+    div#footer-top div#others {
+        width: 80%;
+        height: 50%;
+        padding-top: 0;
+    }
+
+    div#others div.info-box {
+        width: 20%;
+    }
+
+    div#others div.info-box a {
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 2;
+        display: block;
+        text-align: left;
+    }
+
+    div#others div.info-box#newsletter a {
+        line-height: 1.5;
+    }
+
+    div#others div.info-box input#news-email {
+        padding: 5% 3%;
+        margin-top: 5%;
+        font-size: 0.8rem;
+    }
+
+    div#others div.info-box input#confirm-email {
+        width: 50%;
+        margin-top: 3%;
+        font-size: 0.8rem;
+    }
+
+    footer div#footer-bottom {
+        height: 15vh;
+    }
+
+    div#footer-bottom p {
+        font-size: 1rem;
+    }
 }
