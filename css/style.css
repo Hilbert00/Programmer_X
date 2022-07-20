@@ -20,14 +20,20 @@ a {
 /* Menu */
 
 nav {
+    background-color: #f5f5f5;
+    height: 10vh;
+}
+
+div.middle-nav {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: #f5f5f5;
     color: #222;
-    height: 10vh;
-    padding: 1em 5%;
+    padding: 1em 0;
+    height: inherit;
+    max-width: 90vw;
+    margin: 0 auto;
 }
 
 .menu {
@@ -153,12 +159,8 @@ nav {
 /* Hamburguer */
 
 section {
-    display: flex;
     overflow: hidden;
-    padding: 0 5%;
-    min-width: 90%;
     height: 100vh;
-    position: relative;
     color: #f5f5f5;
 }
 
@@ -171,41 +173,57 @@ section h1 {
     z-index: 1;
 }
 
+div.middle {
+    position: relative;
+    height: inherit;
+    max-width: 90vw;
+    margin: 0 auto;
+}
+
 section#home {
     height: 90vh;
     background-size: cover;
     background-position: center;
     background-image: url(../images/mobile/Hero.svg);
-    z-index: -1;
+}
+
+section#home div.middle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+section#home div#home-info {
+    width: 100%;
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
 }
 
 section#home h1 {
+    position: static;
     font-size: 3rem;
-    top: 34%;
     line-height: 100%;
 }
 
 section#home p {
-    position: absolute;
+    position: static;
     font-size: 1rem;
     font-weight: 500;
-    top: 50%;
-    left: 5%;
     width: 60%;
 }
 
-section#home input {
-    position: absolute;
+section#home button {
+    position: static;
     color: #f5f5f5;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     font-weight: 700;
     background: linear-gradient(142.47deg, #48C6EF 14.66%, #6F86D6 150.71%);
     border-radius: 24px;
     border-style: none;
     width: 30%;
     height: 5vh;
-    top: 60%;
-    left: 5%;
 }
 
 section#sobre {
@@ -219,7 +237,7 @@ section#sobre p {
     top: 22%;
     font-size: 1.3rem;
     font-weight: 300;
-    width: 20vh;
+    width: 40%;
     z-index: 1;
 }
 
@@ -235,15 +253,17 @@ div.images {
     position: relative;
     align-items: flex-start;
     width: 100%;
+    height: inherit;
 }
 
-div.images img#wavy {
+div.images picture#wavy,
+div.images picture#wavy img {
     position: absolute;
     height: 200vh;
-    left: -18%;
+    left: -5vw;
 }
 
-section#trajetoria div.images img#wavy {
+section#trajetoria div.images #wavy {
     top: -100vh;
 }
 
@@ -255,7 +275,7 @@ section#trajtoria p {
     z-index: 1;
 }
 
-section#trajetoria img#arrow {
+section#trajetoria picture#arrow img {
     position: absolute;
     z-index: 1;
     height: 70%;
@@ -263,7 +283,7 @@ section#trajetoria img#arrow {
     top: 25%;
 }
 
-section#trajetoria img#icons {
+section#trajetoria picture#icons img {
     position: absolute;
     z-index: 1;
     height: 59%;
@@ -271,7 +291,7 @@ section#trajetoria img#icons {
     top: 25%;
 }
 
-section#trajetoria img#events {
+section#trajetoria picture#events img {
     position: absolute;
     z-index: 1;
     height: 59%;
@@ -279,14 +299,13 @@ section#trajetoria img#events {
     top: 26%;
 }
 
+section#trajetoria img#years {
+    display: none;
+}
+
 section#servicos h1,
 section#servicos p {
     color: #124362;
-}
-
-section#servicos {
-    padding: 0;
-    margin: 0 5%;
 }
 
 section#servicos h1 {
@@ -309,13 +328,17 @@ section#servicos div.flex-box {
     flex-wrap: wrap;
 }
 
+section#servicos a {
+    width: 40%;
+}
+
 section#servicos div.flex-box div.flex-item {
+    width: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    width: 40%;
     padding: 0 0 5% 0;
 }
 
@@ -346,6 +369,11 @@ section#servicos div.flex-box div.flex-item div.flex-item__info span {
     font-weight: 300;
 }
 
+section#contato {
+    height: 50vh;
+    padding: 0;
+}
+
 section#contato div#contact-flex-box {
     display: flex;
     position: absolute;
@@ -354,13 +382,8 @@ section#contato div#contact-flex-box {
     flex-direction: column;
     background: linear-gradient(297.56deg, #48C6EF -68.74%, #124362 84.64%);
     height: 30vh;
-    width: 90%;
-    left: 5%;
+    width: 100%;
     top: 10%;
-}
-
-section#contato {
-    padding: 0;
 }
 
 section#contato div#contact-flex-box p {
@@ -375,8 +398,12 @@ section#contato div#contact-flex-box h2 {
 
 footer {
     position: relative;
-    top: 50vh;
     width: 100%;
+    color: #f5f5f5;
+}
+
+footer div#footer-top__background {
+    background: #393838;
 }
 
 footer div#footer-top {
@@ -385,8 +412,7 @@ footer div#footer-top {
     flex-wrap: wrap;
     justify-content: space-between;
     height: 44vh;
-    padding: 5vh 5% 0;
-    background: #393838;
+    padding: 5vh 0;
 }
 
 div#footer-top div#logo {
@@ -401,7 +427,7 @@ div#footer-top div#logo img {
 div#footer-top div#logo span {
     width: 100%;
     font-weight: 300;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 
 div#footer-top div#logo div#medias {
@@ -411,7 +437,7 @@ div#footer-top div#logo div#medias {
     padding-top: 1vh;
 }
 
-div#footer-top div#logo div#medias a img{
+div#footer-top div#logo div#medias a img {
     width: 100%;
 }
 
@@ -443,12 +469,12 @@ div#others div.info-box input#news-email {
     width: 100%;
     padding: 5% 1%;
     font-size: 0.3rem;
-    color: #393838;
+    color: #606060;
     background: #302f2f;
     border: none;
 }
 
-div#others div.info-box input#confirm-email {
+div#others div.info-box button {
     width: 70%;
     padding: 2% 3%;
     font-size: 0.5rem;
@@ -464,14 +490,16 @@ div#footer-top div#hr-line {
     width: 100%;
 }
 
+footer div#footer-bottom__background {
+    background: #2E2B2B;
+}
+
 footer div#footer-bottom {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 6vh;
-    width: 100%;
-    background: #2E2B2B;
 }
 
 div#footer-bottom p {
@@ -482,6 +510,14 @@ div#footer-bottom p {
 /* Versão Desktop */
 
 @media (min-width: 1024px) {
+    html {
+        font-size: 16px;
+    }
+
+    div.middle, div.middle-nav {
+        max-width: 1024px
+    }
+
     section h1 {
         font-size: 5rem;
         width: 30%;
@@ -492,29 +528,37 @@ div#footer-bottom p {
         background-size: cover;
         background-position: center;
         background-image: url(../images/desktop/Hero.svg);
-        z-index: -1;
     }
 
     section#home h1 {
-        font-size: 6rem;
+        font-size: 8rem;
         width: 30%;
-        top: 20%;
     }
 
     section#home p {
-        font-size: 1.5rem;
-        top: 50%;
+        font-size: 2rem;
+        width: 40%;
+    }
+
+    section#home button {
+        font-size: 1rem;
         width: 20%;
     }
 
-    section#home input {
-        font-size: 1rem;
-        width: 14%;
-        top: 70%;
+    button {
+        transition: all .2s ease-in-out;
+    }
+
+    button:hover {
+        transform: scale(1.1);
+    }
+
+    button:active {
+        transform: scale(1);
     }
 
     section#sobre {
-        background-size: 106.5vh, 180vh;    
+        background-size: 100vh, 180vh;
         background-repeat: no-repeat;
         background-position-x: left, right;
         background-position-y: top;
@@ -523,36 +567,64 @@ div#footer-bottom p {
 
     section#sobre p {
         top: 40%;
-        font-size: 2rem;
+        font-size: 1.6rem;
         width: 30%;
     }
 
-    div.images img#wavy {
-        display: none;
-    }
-
     section#trajetoria {
-        background-size: 90vw, 90vw, 84vw, 82vw, 110vh;  
+        background-size: 48vh;
         background-repeat: no-repeat;
-        background-position-x: center, center, center, center, left;
-        background-position-y: 34vw, 18vw, 21vw, 39vw, bottom;
-        background-image: url(../images/desktop/Arrow.svg), url(../images/desktop/Happenings.svg), url(../images/desktop/Icons.svg), url(../images/desktop/Years.svg), url(../images/desktop/Wavy.svg);
+        background-position-x: left;
+        background-position-y: top;
+        background-image: url(../images/desktop/Wavy.svg);
     }
 
     section#trajetoria h1 {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
-    section#trajetoria img#arrow {
-        display: none;
+    div.images picture#wavy,
+    div.images picture#wavy img {
+        position: absolute;
+        height: 200vh;
     }
 
-    section#trajetoria img#icons {
-        display: none;
+    section#trajetoria picture#arrow,
+    section#trajetoria picture#arrow img {
+        top: 65%;
+        width: 100%;
+        z-index: 1;
+        height: auto;
+        left: 0;
     }
 
-    section#trajetoria img#events {
-        display: none;
+    section#trajetoria picture#icons,
+    section#trajetoria picture#icons img {
+        top: 40%;
+        width: 94%;
+        margin-left: 3%;
+        z-index: 1;
+        height: auto;
+        left: 0;
+    }
+
+    section#trajetoria picture#events,
+    section#trajetoria picture#events img {
+        top: 75%;
+        width: 99%;
+        z-index: 1;
+        height: auto;
+        left: 0;
+    }
+
+    section#trajetoria img#years {
+        display: block;
+        position: absolute;
+        top: 80%;
+        width: 100%;
+        z-index: 1;
+        height: auto;
+        left: 0;
     }
 
     section#servicos h1 {
@@ -565,15 +637,28 @@ div#footer-bottom p {
     }
 
     section#servicos div.flex-box {
-        top: 42%;
+        top: 45%;
+        justify-content: space-around;
+    }
+
+    section#servicos a {
+        width: 23%;
     }
 
     section#servicos div.flex-box div.flex-item {
-        width: 24%;
+        transition: all .2s ease-in-out;
+    }
+
+    section#servicos div.flex-box div.flex-item:hover {
+        transform: scale(1.1);
+    }
+
+    section#servicos div.flex-box div.flex-item:active {
+        transform: scale(1);
     }
 
     section#servicos div.flex-box div.flex-item div.flex-item__banner {
-        height: 40vh;
+        height: 30vh;
     }
 
     section#servicos div.flex-box div.flex-item div.flex-item__banner img {
@@ -581,20 +666,21 @@ div#footer-bottom p {
     }
 
     section#servicos div.flex-box div.flex-item div.flex-item__info {
-        height: 16vh;
+        height: 10vh;
     }
 
     section#servicos div.flex-box div.flex-item div.flex-item__info span {
-        font-size: 2rem;
+        font-size: 1.2rem;
     }
 
     section#contato div#contact-flex-box {
-        top: 5%;
+        top: 15%;
         height: 35vh;
+        width: 100%;
     }
 
     section#contato div#contact-flex-box p {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     section#contato div#contact-flex-box h2 {
@@ -602,28 +688,28 @@ div#footer-bottom p {
         font-weight: 600;
     }
 
-    footer {
-        top: 50vh;
-    }
-
     footer div#footer-top {
         height: 35vh;
     }
 
     div#footer-top div#logo {
+        position: relative;
         width: 15%;
         margin-right: 5%;
     }
 
     div#footer-top div#logo span {
-        font-size: 1.15rem;
+        position: absolute;
+        left: 0;
+        top: 16%;
+        font-size: 0.8rem;
     }
 
     div#footer-top div#logo div#medias {
-        padding-top: 2vh;
+        padding-top: 4vh;
     }
 
-    div#footer-top div#logo div#medias a img{
+    div#footer-top div#logo div#medias a img {
         width: 150%;
     }
 
@@ -638,7 +724,7 @@ div#footer-bottom p {
     }
 
     div#others div.info-box a {
-        font-size: 1rem;
+        font-size: 0.8rem;
         font-weight: 300;
         line-height: 2;
         display: block;
@@ -652,13 +738,17 @@ div#footer-bottom p {
     div#others div.info-box input#news-email {
         padding: 5% 3%;
         margin-top: 5%;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 
-    div#others div.info-box input#confirm-email {
+    div#others div.info-box button {
         width: 50%;
         margin-top: 3%;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
+    }
+
+    div#footer-top div#hr-line {
+        top: 4vh;
     }
 
     footer div#footer-bottom {
@@ -666,6 +756,6 @@ div#footer-bottom p {
     }
 
     div#footer-bottom p {
-        font-size: 1rem;
+        font-size: 0.7rem;
     }
 }

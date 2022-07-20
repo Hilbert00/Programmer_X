@@ -11,108 +11,150 @@
 
 <body>
     <nav>
-        <div id="logo">
-            <img src="./images/mobile/Logo-H2.svg" alt="Logo">
+        <div class="middle-nav">
+            <div id="logo">
+                <img src="./images/mobile/Logo-H2.svg" alt="Logo">
+            </div>
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+            </label>
+            <ul class="menu">
+                <li>
+                    <a href="#sobre">Quem Somos?</a>
+                </li>
+                <li>
+                    <a href="#trajetoria">Trajetória</a>
+                </li>
+                <li>
+                    <a href="#servicos">Serviços</a>
+                </li>
+                <li>
+                    <a href="#contato">Contato</a>
+                </li>
+            </ul>
         </div>
-        <input id="menu-toggle" type="checkbox" />
-        <label class='menu-button-container' for="menu-toggle">
-            <div class='menu-button'></div>
-        </label>
-        <ul class="menu">
-            <li>
-                <a href="#sobre">Quem Somos?</a>
-            </li>
-            <li>
-                <a href="#trajetoria">Trajetória</a>
-            </li>
-            <li>
-                <a href="#servicos">Serviços</a>
-            </li>
-            <li>
-                <a href="#contato">Contato</a>
-            </li>
-        </ul>
     </nav>
-    
+
     <main>
         <section id="home">
-            <h1>BEM VINDO</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <a href="google.com"><input type="button" value="SEJA UM DE NÓS"></a>
+            <div class="middle">
+                <div id="home-info">
+                    <h1>BEM VINDO</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button>SEJA UM DE NÓS</button>
+                </div>
+            </div>
         </section>
 
         <section id="sobre">
-            <h1>QUEM SOMOS?</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus lacinia urna in lobortis.
-                Maecenas feugiat
-                mauris et venenatis lacinia. Nam felis odio, ullamcorper vel magna in, ultrices tempus ipsum.
-            </p>
-            <div class="images">
-                <img id="wavy" src="./images/Mobile/Wavy.svg" alt="Wavy">
+            <div class="middle">
+                <h1>QUEM SOMOS?</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus lacinia urna in lobortis.
+                    Maecenas feugiat
+                    mauris et venenatis lacinia. Nam felis odio, ullamcorper vel magna in, ultrices tempus ipsum.
+                </p>
+                <div class="images">
+                    <picture id="wavy">
+                        <source media="(min-width:1024px)" srcset="./images/desktop/Wavy.svg">
+                        <img src="./images/Mobile/Wavy.svg" alt="Wavy">
+                    </picture>
+                </div>
             </div>
         </section>
 
         <section id="trajetoria">
-            <h1>TRAJETÓRIA DA EMPRESA</h1>
-            <div class="images">
-                <img id="arrow" src="./images/Mobile/Arrow.svg" alt="Arrow">
-                <img id="icons" src="./images/Mobile/Icons.svg" alt="Icons">
-                <img id="events" src="./images/Mobile/Happenings.svg" alt="Events">
-                <img id="wavy" src="./images/Mobile/Wavy.svg" alt="Wavy">
+            <div class="middle">
+                <h1>TRAJETÓRIA DA EMPRESA</h1>
+                <div class="images">
+                    <picture id="arrow">
+                        <source media="(min-width:1024px)" srcset="./images/desktop/Arrow.svg">
+                        <img src="./images/Mobile/Arrow.svg" alt="Arrow">
+                    </picture>
+                    <picture id="icons">
+                        <source media="(min-width:1024px)" srcset="./images/desktop/Icons.svg">
+                        <img src="./images/Mobile/Icons.svg" alt="Icons">
+                    </picture>
+                    <picture id="events">
+                        <source media="(min-width:1024px)" srcset="./images/desktop/Happenings.svg">
+                        <img src="./images/Mobile/Happenings.svg" alt="Events">
+                    </picture>
+                    <img id="years" src="./images/Desktop/Years.svg" alt="Events">
+                    <picture id="wavy">
+                        <source media="(min-width:1024px)" srcset="./images/desktop/Wavy.svg">
+                        <img src="./images/Mobile/Wavy.svg" alt="Wavy">
+                    </picture>
+                </div>
             </div>
         </section>
 
         <section id="servicos">
-            <h1>SERVIÇOS</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus lacinia urna in lobortis.
-                Maecenas feugiat mauris et venenatis lacinia.
-            </p>
-            <div class="flex-box">
-                <div class="flex-item">
-                    <div class="flex-item__banner">
-                        <img src="./images/mobile/HTML-JS-CSS.svg" alt="Web Development">
-                    </div>
-                    <div class="flex-item__info">
-                        <span>Web Development</span>
-                    </div>
-                </div>
+            <div class="middle">
+                <h1>SERVIÇOS</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus lacinia urna in lobortis.
+                    Maecenas feugiat mauris et venenatis lacinia.
+                </p>
+                <div class="flex-box">
+                    <a href="">
+                        <div class="flex-item">
+                            <div class="flex-item__banner">
+                                <img src="./images/mobile/HTML-JS-CSS.svg" alt="Web Development">
+                            </div>
+                            <div class="flex-item__info">
+                                <span>Web Development</span>
+                            </div>
+                        </div>
+                    </a>
 
-                <div class="flex-item">
-                    <div class="flex-item__banner">
-                        <img src="./images/mobile/Mysql.svg" alt="Desenvolvimento de Banco de Dados">
-                    </div>
-                    <div class="flex-item__info">
-                        <span>Desenvolvimento de Banco de Dados</span>
-                    </div>
-                </div>
+                    <a href="">
+                        <div class="flex-item">
+                            <div class="flex-item__banner">
+                                <img src="./images/mobile/Mysql.svg" alt="Desenvolvimento de Banco de Dados">
+                            </div>
+                            <div class="flex-item__info">
+                                <span>Desenvolvimento de Banco de Dados</span>
+                            </div>
+                        </div>
+                    </a>
 
-                <div class="flex-item">
-                    <div class="flex-item__banner">
-                        <img src="./images/mobile/Android.svg" alt="Programação de apps Android">
-                    </div>
-                    <div class="flex-item__info">
-                        <span>Programação de apps Android</span>
-                    </div>
-                </div>
+                    <a href="">
+                        <div class="flex-item">
+                            <div class="flex-item__banner">
+                                <img src="./images/mobile/Android.svg" alt="Programação de apps Android">
+                            </div>
+                            <div class="flex-item__info">
+                                <span>Programação de apps Android</span>
+                            </div>
+                        </div>
+                    </a>
 
-                <div class="flex-item">
-                    <div class="flex-item__banner">
-                        <img src="./images/mobile/Swift.svg" alt="Programação de apps para iOS">
-                    </div>
-                    <div class="flex-item__info">
-                        <span>Programação de apps para iOS</span>
-                    </div>
+                    <a href="">
+                        <div class="flex-item">
+                            <div class="flex-item__banner">
+                                <img src="./images/mobile/Swift.svg" alt="Programação de apps para iOS">
+                            </div>
+                            <div class="flex-item__info">
+                                <span>Programação de apps para iOS</span>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
 
         <section id="contato">
-            <div id="contact-flex-box">
-                <p>Número de Contato</p>
-                <h2>(51) 94002-8922</h2>
+            <div class="middle">
+                <div id="contact-flex-box">
+                    <p>Número de Contato</p>
+                    <h2>(51) 94002-8922</h2>
+                </div>
             </div>
+        </section>
+    </main>
 
-            <footer>
+    <footer>
+        <div id="footer-top__background">
+            <div class="middle">
                 <div id="footer-top">
                     <div id="logo">
                         <img src="./images/mobile/Logo-H.svg" alt="Logo">
@@ -146,8 +188,8 @@
                         <div class="info-box" id="newsletter">
                             <a>Receba nossas novidades</a>
                             <input type="email" name="news-email" id="news-email"
-                                placeholder="Digite seu endereço de email aqui">
-                            <input type="button" value="Confirmar" id="confirm-email">
+                                placeholder="Digite seu endereço de email">
+                            <button id="confirm-email">Confirmar</button>
                         </div>
                     </div>
 
@@ -155,13 +197,17 @@
                         <hr>
                     </div>
                 </div>
+            </div>
+        </div>
 
+        <div id="footer-bottom__background">
+            <div class="middle">
                 <div id="footer-bottom">
                     <p>©Copyright All rights reserved</p>
                 </div>
-            </footer>
-        </section>
-    </main>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
