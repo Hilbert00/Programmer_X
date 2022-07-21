@@ -8,6 +8,7 @@
     <meta name="keywords" content="informatica, tecnologia, programacao, swift, android, web, ios, mobile, desktop">
     <meta name="copyright" content="&copy; 2022 Nicolas A. Hilbert">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="./images/Icon.png">
@@ -54,16 +55,27 @@
 
         <section id="sobre">
             <div class="middle">
-                <h1>QUEM SOMOS?</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus lacinia urna in lobortis.
-                    Maecenas feugiat
-                    mauris et venenatis lacinia. Nam felis odio, ullamcorper vel magna in, ultrices tempus ipsum.
-                </p>
+                <div id="sobre__mobile-layout">
+                    <h1>QUEM SOMOS?</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus lacinia urna in
+                        lobortis. Maecenas feugiat mauris et venenatis lacinia. Nam felis odio.
+                    </p>
+                </div>
                 <div class="images">
                     <picture id="wavy">
-                        <source media="(min-width:1024px)" srcset="./images/desktop/Wavy.svg">
-                        <img src="./images/mobile/Wavy.svg" alt="Wavy">
+                        <source media="(max-width:600px)" srcset="./images/mobile/Wavy.svg">
+                        <img src="">
                     </picture>
+                    <div id="sobre__pc-layout">
+                        <h1>QUEM SOMOS?</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus lacinia urna in
+                            lobortis. Maecenas feugiat mauris et venenatis lacinia. Nam felis odio.
+                        </p>
+                        <div id="pc-layout__gray-box">
+                            <img src="./images/desktop/Man.svg" alt="Bussiness Man">
+                        </div>
+                        <div id="pc-layout__blue-box"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -72,21 +84,21 @@
             <div class="middle">
                 <h1>TRAJETÓRIA DA EMPRESA</h1>
                 <div class="images">
-                    <picture id="arrow">
-                        <source media="(min-width:1024px)" srcset="./images/desktop/Arrow.svg">
-                        <img src="./images/mobile/Arrow.svg" alt="Arrow">
-                    </picture>
                     <picture id="icons">
-                        <source media="(min-width:1024px)" srcset="./images/desktop/Icons.svg">
+                        <source media="(min-width:600px)" srcset="./images/desktop/Icons.svg">
                         <img src="./images/mobile/Icons.svg" alt="Icons">
                     </picture>
+                    <picture id="arrow">
+                        <source media="(min-width:600px)" srcset="./images/desktop/Arrow.svg">
+                        <img src="./images/mobile/Arrow.svg" alt="Arrow">
+                    </picture>
                     <picture id="events">
-                        <source media="(min-width:1024px)" srcset="./images/desktop/Happenings.svg">
+                        <source media="(min-width:600px)" srcset="./images/desktop/Happenings.svg">
                         <img src="./images/mobile/Happenings.svg" alt="Events">
                     </picture>
                     <img id="years" src="./images/desktop/Years.svg" alt="Events">
                     <picture id="wavy">
-                        <source media="(min-width:1024px)" srcset="./images/desktop/Wavy.svg">
+                        <source media="(min-width:600px)" srcset="./images/desktop/Wavy.svg">
                         <img src="./images/mobile/Wavy.svg" alt="Wavy">
                     </picture>
                 </div>

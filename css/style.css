@@ -102,7 +102,7 @@ div.middle-nav {
     transform: rotate(-405deg);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
     nav div#logo {
         width: 80%;
     }
@@ -240,6 +240,10 @@ section#sobre {
     background-image: url(../images/mobile/AboutBackground.svg);
 }
 
+section#sobre div#sobre__pc-layout {
+    display: none;
+}
+
 section#sobre h1,
 section#trajetoria h1 {
     z-index: 1;
@@ -250,7 +254,7 @@ section#sobre p {
     top: 22%;
     font-size: 1.3rem;
     font-weight: 300;
-    width: 40%;
+    width: 30%;
     z-index: 1;
 }
 
@@ -443,7 +447,7 @@ div#footer-top div#logo div#medias {
     display: flex;
     position: relative;
     justify-content: space-between;
-    padding-top: 1vh;
+    padding-top: 2vh;
 }
 
 div#footer-top div#logo div#medias a img {
@@ -518,18 +522,14 @@ div#footer-bottom p {
 
 /* Versão Desktop */
 
-@media (min-width: 1024px) {
-    html {
-        font-size: 16px;
-    }
-
+@media (min-width: 600px) {
     div.middle,
     div.middle-nav {
         max-width: 1024px
     }
 
     section h1 {
-        font-size: 5rem;
+        font-size: 3rem;
         width: 30%;
     }
 
@@ -541,22 +541,18 @@ div#footer-bottom p {
     }
 
     section#home h1 {
-        font-size: 8rem;
+        font-size: 5rem;
         width: 30%;
     }
 
     section#home p {
         font-size: 2rem;
-        width: 40%;
+        width: 50%;
     }
 
     section#home button {
         font-size: 1rem;
         width: 20%;
-    }
-
-    button {
-        transition: all .2s ease-in-out;
     }
 
     button:hover {
@@ -568,71 +564,117 @@ div#footer-bottom p {
     }
 
     section#sobre {
-        background-size: 100vh, 180vh;
-        background-repeat: no-repeat;
-        background-position-x: left, right;
-        background-position-y: top;
-        background-image: url(../images/desktop/Wavy.svg), url(../images/desktop/AboutBackground.svg);
+        background-image: url();
+    }
+
+    section#sobre h1,
+    section#sobre p {
+        color: #124362;
+    }
+
+    section#sobre h1 {
+        top: 0;
     }
 
     section#sobre p {
-        top: 40%;
-        font-size: 1.6rem;
-        width: 30%;
+        top: 45%;
+        font-size: 1.5rem;
+        width: 45%;
+    }
+
+    section#sobre div#sobre__mobile-layout {
+        display: none;
+    }
+
+    section#sobre div#sobre__pc-layout {
+        display: block;
+        position: relative;
+        max-height: 600px;
+        height: inherit;
+        width: 100%;
+        margin: auto 0;
+    }
+
+    div#sobre__pc-layout div#pc-layout__gray-box {
+        position: relative;
+        width: 75%;
+        margin-left: 20%;
+        height: 60%;
+        top: 30%;
+        background: #e5e5e5;
+    }
+
+    div#sobre__pc-layout div#pc-layout__gray-box img {
+        position: absolute;
+        height: 130%;
+        bottom: 0;
+        right: 0;
+    }
+
+    div#sobre__pc-layout div#pc-layout__blue-box {
+        position: absolute;
+        width: 75%;
+        margin-left: 25%;
+        height: 50%;
+        top: 20%;
+        background: #59A9E4;
+        z-index: -1;
     }
 
     section#trajetoria {
-        background-size: 48vh;
-        background-repeat: no-repeat;
-        background-position-x: left;
-        background-position-y: top;
         background-image: url(../images/desktop/Wavy.svg);
+        background-size: 100vw;
+        background-position: bottom;
+        background-repeat: no-repeat;
     }
 
     section#trajetoria h1 {
         font-size: 3rem;
+        width: 40%;
+        top: 5%;
+        color: #124362;
     }
 
     div.images picture#wavy,
     div.images picture#wavy img {
-        position: absolute;
-        height: 200vh;
+        display: none;
+    }
+
+    section#trajetoria div.images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 
     section#trajetoria picture#arrow,
     section#trajetoria picture#arrow img {
-        top: 65%;
+        position: static;
         width: 100%;
-        z-index: 1;
         height: auto;
         left: 0;
     }
 
     section#trajetoria picture#icons,
     section#trajetoria picture#icons img {
-        top: 40%;
-        width: 94%;
-        margin-left: 3%;
-        z-index: 1;
+        position: static;
+        width: 98%;
         height: auto;
         left: 0;
     }
 
     section#trajetoria picture#events,
     section#trajetoria picture#events img {
-        top: 75%;
+        position: static;
         width: 99%;
-        z-index: 1;
         height: auto;
         left: 0;
     }
 
     section#trajetoria img#years {
         display: block;
-        position: absolute;
-        top: 80%;
-        width: 100%;
-        z-index: 1;
+        position: static;
+        width: 92%;
         height: auto;
         left: 0;
     }
@@ -642,7 +684,7 @@ div#footer-bottom p {
     }
 
     section#servicos p {
-        font-size: 2rem;
+        font-size: 1.5rem;
         top: 22%;
     }
 
@@ -680,7 +722,7 @@ div#footer-bottom p {
     }
 
     section#servicos div.flex-box div.flex-item div.flex-item__info span {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     section#contato div#contact-flex-box {
@@ -694,7 +736,7 @@ div#footer-bottom p {
     }
 
     section#contato div#contact-flex-box h2 {
-        font-size: 4rem;
+        font-size: 3.5rem;
         font-weight: 600;
     }
 
@@ -716,11 +758,11 @@ div#footer-bottom p {
     }
 
     div#footer-top div#logo div#medias {
-        padding-top: 4vh;
+        padding-top: 5vh;
     }
 
     div#footer-top div#logo div#medias a img {
-        width: 150%;
+        width: 100%;
     }
 
     div#footer-top div#others {
@@ -749,10 +791,10 @@ div#footer-bottom p {
         padding: 5% 3%;
         margin-top: 5%;
         font-size: 0.7rem;
+        width: 100%;
     }
 
     div#others div.info-box button {
-        width: 50%;
         margin-top: 3%;
         font-size: 0.7rem;
     }
